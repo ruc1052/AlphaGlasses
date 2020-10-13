@@ -7,14 +7,14 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 
-const indexFormat = require('../front/indexFormat');
-const userFormat = require('../front/userFormat');
+const indexFormat = require('./front/indexFormat');
+const userFormat = require('./front/userFormat');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/static', express.static('users'));
 
-app.get('/', (req, res) => {
+app.get('/user/list', (req, res) => {
   res.send(indexFormat.HTML());
 });
 
@@ -29,7 +29,7 @@ app.post('/api/user/:userName/info', (req, res) => {
   let newInfo = req.body.info;
   fs.writeFile(dir, newInfo, (err) => {
     if(err) console.log(err);
-    res.redirect('/');
+    res.redirect('/user/list');
   });
 });
 
@@ -48,7 +48,7 @@ app.post('/api/user/:userName/upload', (req, res) => {
 
   upload(req, res, (err) => {
     if(err) console.log(err);
-    res.redirect('/');
+    res.redirect('/user/list');
   });
 });
 
@@ -64,7 +64,7 @@ app.post('/api/addUser', (req, res) => {
     });
     fs.appendFile(`./users/list`, `${encodeURIComponent(name)}\n`, (err) => {
       if(err) console.log(err);
-      res.redirect('/');
+      res.redirect('/user/list');
     });
   }
 });
@@ -73,7 +73,11 @@ app.get('/test', (req, res) => {
   res.sendFile(path.join(__dirname + "/front/html/inputs.html"));
 });
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname + "/home/index.html"));
+})
 
+app.use('/', express.static('home'));
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
