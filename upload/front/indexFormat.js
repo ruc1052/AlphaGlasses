@@ -44,8 +44,11 @@ const HTML = () => {
 			  </div>
 		  </div>
 		  <div id="wrapper1">
-  			<div id="welcome" class="container">
-  			  <div class="title">
+        <div id="welcome" class="container">
+          <div class="title">
+          <a style="font-size: 50" class="bnt" href="../program/Alpha_Camera_Application.zip" download>대상 사진 촬영 프로그램</a>
+          </div>
+          <div class="title">
   			  	<h2>대상 리스트</h2>
   			  </div>
           <p style="font-size: 24px; text-align: center;">
