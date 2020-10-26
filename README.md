@@ -7,10 +7,12 @@
 - 구동 OS: Raspbian
 - 구동 하드웨어: Raspberry Pi Zero WH
 - 구동에 필요한 라이브러리:
-    pip3 install opencv-python
-    pip3 install opencv-contrib-python
-    pip3 install numpy
-    pip3 install gTTS
+```
+pip3 install opencv-python
+pip3 install opencv-contrib-python
+pip3 install numpy
+pip3 install gTTS
+```
 - Raspbian이 설치된 Raspberry Pi Zero WH에서 구동하기 위해 제작된 프로그램으로 일반적인 Windows 환경에서는 구동되지 않습니다.
 - Transparent Display  Output 프로그램과 모듈화 되어 있기에 함께 구동하지 않으면 정상적으로 작동 되지 않습니다.
 
