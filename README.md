@@ -17,7 +17,8 @@ pip3 install gTTS
 - Transparent Display  Output 프로그램과 모듈화 되어 있기에 함께 구동하지 않으면 정상적으로 작동 되지 않습니다.
 
 ## Alpha Glasses Face Detection A.I (For Windows OS)
-- 제작 언어: Python3
+- 제작 언어: Python
+- 버젼 : 3.7.8
 - 구동 OS: Windows
 - 제작과 구동을 테스트 한 하드웨어: Samsung Odyssey Z
 - 구동에 필요한 라이브러리:
@@ -29,6 +30,10 @@ pip3 install gTTS
 ```
 - 인공지능을 구동하실 수 없는 Windows 환경에서도 구동을 해보실 수 있도록 Windows 환경에서 구동가능한 버전을 따로 만들었습니다.
 - Windows OS 구동용은 따로 Transparent Display Output 프로그램이 존재하지 않아 오직 콘솔에만 결과가 나타납니다.
+- 라즈베리 파이에서 구동시킬 때는 사진이나 정보가 자동으로 알맞은 경로에 저장되지만, 
+  윈도우의 경우에는 인식할 대상을 data/user 폴더 아래에 대상의 이름으로된 폴더를 생성하여(ex : 위승빈)
+  그 폴더 안에 100장의 사진과 대상의 정보를 적은 info.txt파일을 수동으로 저장해 주셔야합니다. 
+  
 
 ## Transparent Display Output
 - 제작 언어: Python3
@@ -39,7 +44,8 @@ pip3 install gTTS
 - 
 
 ## Alpha Camera Application (Code)
-- 제작 언어: Python3
+- 제작 언어: Python
+- 버젼: 3.7.8
 - 구동 OS: Windows
 - 제작과 구동을 테스트 한 하드웨어: Samsung Odyssey Z
 - 구동에 필요한 라이브러리:
@@ -48,10 +54,12 @@ pip3 install opencv-python
 pip3 install opencv-contrib-python
 pip3 install numpy
 ```
-- 이 코드를 () 하는 과정을 거쳐 exe 파일로 만든 것이 Alpha Camera Application (Program) 입니다.
-
+- 이 코드를 pyinstaller를 통해 exe 파일로 만든 것이 Alpha Camera Application (Program) 입니다.
+- 코드를 실행시키면 img폴더 아래 입력한이름의 폴더가 생성되며, 그 폴더 안에는 촬영된 100장의 사진이 들어있습니다.
 ## Alpha Camera Application (Program)
-- 제작 언어: Python3
+- 제작 언어: Python
+- 버젼:  3.7.8
+- PyInstaller: 4.0
 - 구동 OS: Windows
 - 제작과 구동을 테스트 한 하드웨어: Samsung Odyssey Z
-- .exe 확장자로 되어 있는 파일을 실행 시키는 형식이라, 따로 구동에 필요한 라이브러리는 존재하지 않습니다.
+- zip파일에 .exe파일과 구동에 필요한 모든 파일들을 함께 저장해서 사용자가 따로 라이브러리 파일을 설치하지 않아도 실행 가능합니다.
