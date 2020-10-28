@@ -2,6 +2,7 @@
 ## Alpha Glasses에 들어가는 모든 프로그램들의 설명을 기재한 곳입니다.
 - 실제 사용되는 모든 프로그램들의 코드와 실행 파일들을 올려두었습니다. 각각의 프로그램들의 구동 OS와 같은 환경들은 각각의 프로그램들에 기재하도록 하겠습니다.
 - 제품 개발에 사용된 논문들과 제작한 보고서들 또한 원본을 Appendix 폴더에 넣어 제출하겠습니다.
+- Raspbian에 내장되는 인공지능, 화면 출력 소스코드는 모두 Alpha_Glasses_Face_Detection&Transparent_Display_Output 디렉토리 내부의 Alpha 디렉토리 내부의 examples 디렉토리에 있습니다. 각각의 파일 명들은 아래 Transparent Display Output 부분에서 설명이 되고 있습니다.
 
 ## Alpha Glasses Face Detection A.I (For Raspbian Os Attached Raspberry Pi Zero WH)
 - 제작 언어: Python3
