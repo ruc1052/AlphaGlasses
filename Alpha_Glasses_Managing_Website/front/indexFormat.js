@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const HTML = () => {
-  const directoryPath = path.join(__dirname, '../users');
+  const directoryPath = path.join(__dirname, '../users'); //__dirname 특별한 변수로 현재 디렉토리를 나타냄 이걸 사용한 이유는 6번째 줄에서 directoryPath 절대경로만 받기 때문.
   let users = fs.readdirSync(directoryPath);
   let userListHTML = "";
   users.forEach(user => {
